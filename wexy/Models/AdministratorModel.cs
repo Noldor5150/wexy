@@ -10,7 +10,7 @@ using System.ComponentModel;
 
 namespace wexy.Models
 {
-    class AdministratorModel
+   public class AdministratorModel
     {
         //Fields
 

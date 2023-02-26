@@ -36,15 +36,15 @@ namespace wexy.Views
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxPassword = new System.Windows.Forms.TextBox();
+            this.txtBoxUserName = new System.Windows.Forms.TextBox();
+            this.txtBoxEmail = new System.Windows.Forms.TextBox();
+            this.txtBoxLastName = new System.Windows.Forms.TextBox();
+            this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.UserName = new System.Windows.Forms.ColumnHeader();
             this.FullName = new System.Windows.Forms.ColumnHeader();
+            this.UserName = new System.Windows.Forms.ColumnHeader();
             this.Email = new System.Windows.Forms.ColumnHeader();
             this.Add = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
@@ -60,11 +60,11 @@ namespace wexy.Views
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBoxPassword);
+            this.panel1.Controls.Add(this.txtBoxUserName);
+            this.panel1.Controls.Add(this.txtBoxEmail);
+            this.panel1.Controls.Add(this.txtBoxLastName);
+            this.panel1.Controls.Add(this.txtBoxFirstName);
             this.panel1.Location = new System.Drawing.Point(28, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 336);
@@ -125,40 +125,40 @@ namespace wexy.Views
             this.label1.TabIndex = 5;
             this.label1.Text = "First Name";
             // 
-            // textBox5
+            // txtBoxPassword
             // 
-            this.textBox5.Location = new System.Drawing.Point(185, 224);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(271, 27);
-            this.textBox5.TabIndex = 4;
+            this.txtBoxPassword.Location = new System.Drawing.Point(185, 224);
+            this.txtBoxPassword.Name = "txtBoxPassword";
+            this.txtBoxPassword.Size = new System.Drawing.Size(271, 27);
+            this.txtBoxPassword.TabIndex = 4;
             // 
-            // textBox4
+            // txtBoxUserName
             // 
-            this.textBox4.Location = new System.Drawing.Point(185, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(271, 27);
-            this.textBox4.TabIndex = 3;
+            this.txtBoxUserName.Location = new System.Drawing.Point(185, 168);
+            this.txtBoxUserName.Name = "txtBoxUserName";
+            this.txtBoxUserName.Size = new System.Drawing.Size(271, 27);
+            this.txtBoxUserName.TabIndex = 3;
             // 
-            // textBox3
+            // txtBoxEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(185, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(271, 27);
-            this.textBox3.TabIndex = 2;
+            this.txtBoxEmail.Location = new System.Drawing.Point(185, 119);
+            this.txtBoxEmail.Name = "txtBoxEmail";
+            this.txtBoxEmail.Size = new System.Drawing.Size(271, 27);
+            this.txtBoxEmail.TabIndex = 2;
             // 
-            // textBox2
+            // txtBoxLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(185, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(271, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtBoxLastName.Location = new System.Drawing.Point(185, 68);
+            this.txtBoxLastName.Name = "txtBoxLastName";
+            this.txtBoxLastName.Size = new System.Drawing.Size(271, 27);
+            this.txtBoxLastName.TabIndex = 1;
             // 
-            // textBox1
+            // txtBoxFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtBoxFirstName.Location = new System.Drawing.Point(185, 11);
+            this.txtBoxFirstName.Name = "txtBoxFirstName";
+            this.txtBoxFirstName.Size = new System.Drawing.Size(271, 27);
+            this.txtBoxFirstName.TabIndex = 0;
             // 
             // panel2
             // 
@@ -185,15 +185,15 @@ namespace wexy.Views
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // UserName
-            // 
-            this.UserName.Text = "Username";
-            this.UserName.Width = 210;
-            // 
             // FullName
             // 
             this.FullName.Text = "FullName";
             this.FullName.Width = 180;
+            // 
+            // UserName
+            // 
+            this.UserName.Text = "Username";
+            this.UserName.Width = 210;
             // 
             // Email
             // 
@@ -241,11 +241,11 @@ namespace wexy.Views
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtBoxLastName;
+        private System.Windows.Forms.TextBox txtBoxFirstName;
+        private System.Windows.Forms.TextBox txtBoxPassword;
+        private System.Windows.Forms.TextBox txtBoxUserName;
+        private System.Windows.Forms.TextBox txtBoxEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

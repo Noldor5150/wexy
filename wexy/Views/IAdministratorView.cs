@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace wexy.Views
 {
-    interface IAdministratorView
+   public interface IAdministratorView
     {
         //Props-Fields
         string FirstName { get; set; }
@@ -26,7 +26,7 @@ namespace wexy.Views
         event EventHandler AddNewEvent;
         event EventHandler UpdateEvent;
         event EventHandler SaveEvent;
-        event EventHandler DeletEvent;
+        event EventHandler DeleteEvent;
 
         //Methods
 

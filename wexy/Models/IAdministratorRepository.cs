@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wexy.Models
 {
-    interface IAdministratorRepository
+    public interface IAdministratorRepository
     {
         void Add(AdministratorModel admin);
         void Update(AdministratorModel admin);

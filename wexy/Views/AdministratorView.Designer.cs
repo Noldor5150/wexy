@@ -30,7 +30,7 @@ namespace wexy.Views
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Save = new System.Windows.Forms.Button();
+            this.ButtonSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,19 +42,19 @@ namespace wexy.Views
             this.txtBoxLastName = new System.Windows.Forms.TextBox();
             this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.FullName = new System.Windows.Forms.ColumnHeader();
-            this.UserName = new System.Windows.Forms.ColumnHeader();
-            this.Email = new System.Windows.Forms.ColumnHeader();
-            this.Add = new System.Windows.Forms.Button();
-            this.Update = new System.Windows.Forms.Button();
+            this.AdminListView = new System.Windows.Forms.ListView();
+            this.FullNameHeader = new System.Windows.Forms.ColumnHeader();
+            this.UserNameHeader = new System.Windows.Forms.ColumnHeader();
+            this.EmailHeader = new System.Windows.Forms.ColumnHeader();
+            this.ButtonAdd = new System.Windows.Forms.Button();
+            this.ButtonUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.Save);
+            this.panel1.Controls.Add(this.ButtonSave);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -70,15 +70,14 @@ namespace wexy.Views
             this.panel1.Size = new System.Drawing.Size(682, 336);
             this.panel1.TabIndex = 0;
             // 
-            // Save
+            // ButtonSave
             // 
-            this.Save.Location = new System.Drawing.Point(41, 275);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(94, 29);
-            this.Save.TabIndex = 10;
-            this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
+            this.ButtonSave.Location = new System.Drawing.Point(41, 275);
+            this.ButtonSave.Name = "ButtonSave";
+            this.ButtonSave.Size = new System.Drawing.Size(94, 29);
+            this.ButtonSave.TabIndex = 10;
+            this.ButtonSave.Text = "Save";
+            this.ButtonSave.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -162,71 +161,69 @@ namespace wexy.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.AdminListView);
             this.panel2.Location = new System.Drawing.Point(28, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(682, 247);
             this.panel2.TabIndex = 1;
             // 
-            // listView1
+            // AdminListView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FullName,
-            this.UserName,
-            this.Email});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(682, 247);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.AdminListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FullNameHeader,
+            this.UserNameHeader,
+            this.EmailHeader});
+            this.AdminListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminListView.FullRowSelect = true;
+            this.AdminListView.GridLines = true;
+            this.AdminListView.HideSelection = false;
+            this.AdminListView.Location = new System.Drawing.Point(0, 0);
+            this.AdminListView.Name = "AdminListView";
+            this.AdminListView.Size = new System.Drawing.Size(682, 247);
+            this.AdminListView.TabIndex = 0;
+            this.AdminListView.UseCompatibleStateImageBehavior = false;
+            this.AdminListView.View = System.Windows.Forms.View.Details;
             // 
-            // FullName
+            // FullNameHeader
             // 
-            this.FullName.Text = "FullName";
-            this.FullName.Width = 180;
+            this.FullNameHeader.Text = "FullName";
+            this.FullNameHeader.Width = 180;
             // 
-            // UserName
+            // UserNameHeader
             // 
-            this.UserName.Text = "Username";
-            this.UserName.Width = 210;
+            this.UserNameHeader.Text = "Username";
+            this.UserNameHeader.Width = 210;
             // 
-            // Email
+            // EmailHeader
             // 
-            this.Email.Text = "Email";
-            this.Email.Width = 280;
+            this.EmailHeader.Text = "Email";
+            this.EmailHeader.Width = 280;
             // 
-            // Add
+            // ButtonAdd
             // 
-            this.Add.Location = new System.Drawing.Point(778, 426);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(94, 29);
-            this.Add.TabIndex = 2;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.ButtonAdd.Location = new System.Drawing.Point(778, 426);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.Size = new System.Drawing.Size(94, 29);
+            this.ButtonAdd.TabIndex = 2;
+            this.ButtonAdd.Text = "Add";
+            this.ButtonAdd.UseVisualStyleBackColor = true;
             // 
-            // Update
+            // ButtonUpdate
             // 
-            this.Update.Location = new System.Drawing.Point(778, 505);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(94, 29);
-            this.Update.TabIndex = 3;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.ButtonUpdate.Location = new System.Drawing.Point(778, 505);
+            this.ButtonUpdate.Name = "ButtonUpdate";
+            this.ButtonUpdate.Size = new System.Drawing.Size(94, 29);
+            this.ButtonUpdate.TabIndex = 3;
+            this.ButtonUpdate.Text = "Update";
+            this.ButtonUpdate.UseVisualStyleBackColor = true;
             // 
             // AdministratorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 730);
-            this.Controls.Add(this.Update);
-            this.Controls.Add(this.Add);
+            this.Controls.Add(this.ButtonUpdate);
+            this.Controls.Add(this.ButtonAdd);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AdministratorView";
@@ -251,13 +248,13 @@ namespace wexy.Views
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader FullName;
-        private System.Windows.Forms.ColumnHeader UserName;
-        private System.Windows.Forms.ColumnHeader Email;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.ListView AdminListView;
+        private System.Windows.Forms.ColumnHeader FullNameHeader;
+        private System.Windows.Forms.ColumnHeader UserNameHeader;
+        private System.Windows.Forms.ColumnHeader EmailHeader;
+        private System.Windows.Forms.Button ButtonAdd;
+        private System.Windows.Forms.Button ButtonUpdate;
     }
 }

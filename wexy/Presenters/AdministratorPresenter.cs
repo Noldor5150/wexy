@@ -25,12 +25,43 @@ namespace wexy.Presenters
             // Subscribe event handler methods to view events
             this.view.AddNewEvent += AddNewAdministrator;
             this.view.SaveEvent += SaveAdministarorParams;
+            this.view.UpdateEvent += UpdateAdministrator;
+            this.view.CancelEvent += CancelAction;
+            this.view.EditEvent += LoadSelectedAdminForEdit;
+            this.view.SaveEvent += SearchAdministrator;
+            this.view.DeleteEvent += DeleteAdministrator;
+
             // Set admin list binding source
             this.view.SetAdministratorListBindingSource(adminBindingSource);
             //load admin list view
             LoadAllAdministrators();
             //show view
             this.view.Show();
+        }
+
+        private void DeleteAdministrator(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SearchAdministrator(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void LoadSelectedAdminForEdit(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CancelAction(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UpdateAdministrator(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void LoadAllAdministrators()

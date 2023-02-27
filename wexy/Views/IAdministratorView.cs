@@ -26,7 +26,9 @@ namespace wexy.Views
         event EventHandler AddNewEvent;
         event EventHandler UpdateEvent;
         event EventHandler SaveEvent;
+        event EventHandler EditEvent;
         event EventHandler DeleteEvent;
+        event EventHandler CancelEvent;
 
         //Methods
 

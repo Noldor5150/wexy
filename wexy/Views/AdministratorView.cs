@@ -62,6 +62,13 @@ namespace wexy.Views
         public AdministratorView()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
+        }
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            //implement update save addnew events
+            throw new NotImplementedException();
         }
 
         public event EventHandler SearchEvent;
@@ -69,21 +76,10 @@ namespace wexy.Views
         public event EventHandler UpdateEvent;
         public event EventHandler SaveEvent;
         public event EventHandler DeleteEvent;
+        public event EventHandler EditEvent;
+        public event EventHandler CancelEvent;
 
-        private void Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Add_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Update_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         /// <summary>
         /// bind administrators list to DataGridView

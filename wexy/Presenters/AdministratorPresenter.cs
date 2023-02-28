@@ -17,6 +17,9 @@ namespace wexy.Presenters
         private BindingSource adminBindingSource;
         private IEnumerable<AdministratorModel> adminList;
 
+        
+        
+
         public AdministratorPresenter(IAdministratorView view, IAdministratorRepository repository)
         {
             this.view = view;
@@ -64,9 +67,18 @@ namespace wexy.Presenters
             throw new NotImplementedException();
         }
 
+
+        List<AdministratorModel> adminlisttest = new List<AdministratorModel>()
+        {
+            new AdministratorModel() {Id = 1, FirstName = "Billy", LastName = "Gibbons", Email = "billgib@zztop.com", UserName = "KillBill", Password = "somepassword"},
+            new AdministratorModel() {Id = 2, FirstName = "Paul", LastName = "Sanders", Email = "pollyS@frieds.com", UserName = "Polly S", Password = "somepassword"},
+            new AdministratorModel() {Id = 3, FirstName = "Donny", LastName = "Trump", Email = "donnytb@president.com", UserName = "Donny", Password = "somepassword"}
+        };
         private void LoadAllAdministrators()
         {
-            throw new NotImplementedException();
+            //adminList = repository.GetAll();
+            //adminBindingSource.DataSource = adminList;
+            adminBindingSource.DataSource = adminlisttest;
         }
 
         private void SaveAdministarorParams(object sender, EventArgs e)

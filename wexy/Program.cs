@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wexy.Models;
+using wexy.Presenters;
+using wexy.Repositories;
+using wexy.Views;
 
 namespace wexy
 {
@@ -17,7 +21,10 @@ namespace wexy
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            IAdministratorView adminview = new AdministratorView();
+            IAdministratorRepository repository = new AdministratorRepository();
+            new AdministratorPresenter(adminview, repository);
+            Application.Run((Form)adminview );
         }
     }
 }

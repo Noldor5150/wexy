@@ -42,14 +42,12 @@ namespace wexy.Views
             this.txtBoxLastName = new System.Windows.Forms.TextBox();
             this.txtBoxFirstName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.AdminListView = new System.Windows.Forms.ListView();
-            this.FullNameHeader = new System.Windows.Forms.ColumnHeader();
-            this.UserNameHeader = new System.Windows.Forms.ColumnHeader();
-            this.EmailHeader = new System.Windows.Forms.ColumnHeader();
+            this.dataGridAdminListView = new System.Windows.Forms.DataGridView();
             this.ButtonAdd = new System.Windows.Forms.Button();
             this.ButtonUpdate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdminListView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,43 +159,23 @@ namespace wexy.Views
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.AdminListView);
+            this.panel2.Controls.Add(this.dataGridAdminListView);
             this.panel2.Location = new System.Drawing.Point(28, 395);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(682, 247);
             this.panel2.TabIndex = 1;
             // 
-            // AdminListView
+            // dataGridAdminListView
             // 
-            this.AdminListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.FullNameHeader,
-            this.UserNameHeader,
-            this.EmailHeader});
-            this.AdminListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminListView.FullRowSelect = true;
-            this.AdminListView.GridLines = true;
-            this.AdminListView.HideSelection = false;
-            this.AdminListView.Location = new System.Drawing.Point(0, 0);
-            this.AdminListView.Name = "AdminListView";
-            this.AdminListView.Size = new System.Drawing.Size(682, 247);
-            this.AdminListView.TabIndex = 0;
-            this.AdminListView.UseCompatibleStateImageBehavior = false;
-            this.AdminListView.View = System.Windows.Forms.View.Details;
-            // 
-            // FullNameHeader
-            // 
-            this.FullNameHeader.Text = "FullName";
-            this.FullNameHeader.Width = 180;
-            // 
-            // UserNameHeader
-            // 
-            this.UserNameHeader.Text = "Username";
-            this.UserNameHeader.Width = 210;
-            // 
-            // EmailHeader
-            // 
-            this.EmailHeader.Text = "Email";
-            this.EmailHeader.Width = 280;
+            this.dataGridAdminListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAdminListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridAdminListView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridAdminListView.Name = "dataGridAdminListView";
+            this.dataGridAdminListView.RowHeadersWidth = 51;
+            this.dataGridAdminListView.RowTemplate.Height = 29;
+            this.dataGridAdminListView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridAdminListView.Size = new System.Drawing.Size(682, 247);
+            this.dataGridAdminListView.TabIndex = 0;
             // 
             // ButtonAdd
             // 
@@ -231,6 +209,7 @@ namespace wexy.Views
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAdminListView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,11 +229,8 @@ namespace wexy.Views
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView AdminListView;
-        private System.Windows.Forms.ColumnHeader FullNameHeader;
-        private System.Windows.Forms.ColumnHeader UserNameHeader;
-        private System.Windows.Forms.ColumnHeader EmailHeader;
         private System.Windows.Forms.Button ButtonAdd;
         private System.Windows.Forms.Button ButtonUpdate;
+        private System.Windows.Forms.DataGridView dataGridAdminListView;
     }
 }

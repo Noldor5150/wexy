@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wexy.Models;
 
 namespace wexy.Views
 {
@@ -62,7 +63,8 @@ namespace wexy.Views
         public AdministratorView()
         {
             InitializeComponent();
-            AssociateAndRaiseViewEvents();
+            
+            //AssociateAndRaiseViewEvents();
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -79,7 +81,6 @@ namespace wexy.Views
         public event EventHandler EditEvent;
         public event EventHandler CancelEvent;
 
-      
 
         /// <summary>
         /// bind administrators list to DataGridView
@@ -87,7 +88,8 @@ namespace wexy.Views
         /// <param name="adminList"></param>
         public void SetAdministratorListBindingSource(BindingSource adminList)
         {
-            throw new NotImplementedException();
+            dataGridAdminListView.DataSource = adminList;
+            //dataGridAdminListView.DataSource = adminlisttest;
         }
     }
 }

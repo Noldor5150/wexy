@@ -164,6 +164,7 @@ namespace wexy.Views
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(682, 247);
             this.panel2.TabIndex = 1;
+            this.panel2.Dock = Dock;
             // 
             // dataGridAdminListView
             // 

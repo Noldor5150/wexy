@@ -89,7 +89,21 @@ namespace wexy.Views
         public void SetAdministratorListBindingSource(BindingSource adminList)
         {
             dataGridAdminListView.DataSource = adminList;
-            //dataGridAdminListView.DataSource = adminlisttest;
+            SetupAdministratorDataGridView(dataGridAdminListView);
+        }
+
+        private void SetupAdministratorDataGridView(DataGridView grid)
+        {
+            grid.AutoGenerateColumns = false;
+            var columnFirstName = new DataGridViewTextBoxColumn() { HeaderText = "Name", DataPropertyName = "FirstName" };
+            var columnLastName = new DataGridViewTextBoxColumn() { HeaderText = "Last Name", DataPropertyName = "LastName" };
+            var columnUserName = new DataGridViewTextBoxColumn() { HeaderText = "User Name", DataPropertyName = "UserName" };
+            var columnEmail = new DataGridViewTextBoxColumn() { HeaderText = "Email", DataPropertyName = "Email" };
+            grid.Columns.Add(columnFirstName);
+            grid.Columns.Add(columnLastName);
+            grid.Columns.Add(columnUserName);
+            grid.Columns.Add(columnEmail);
+            grid.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

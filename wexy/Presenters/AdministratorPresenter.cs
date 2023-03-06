@@ -31,7 +31,7 @@ namespace wexy.Presenters
             this.view.UpdateEvent += UpdateAdministrator;
             this.view.CancelEvent += CancelAction;
             this.view.EditEvent += LoadSelectedAdminForEdit;
-            this.view.SaveEvent += SearchAdministrator;
+            this.view.SearchEvent+= SearchAdministrator;
             this.view.DeleteEvent += DeleteAdministrator;
 
             // Set admin list binding source
@@ -41,6 +41,38 @@ namespace wexy.Presenters
             //show view
             this.view.Show();
         }
+        private void SaveAdministarorParams(object sender, EventArgs e)
+        {
+            var model = new AdministratorModel();
+            model.Id = 1;
+            model.FirstName = view.FirstName;
+            model.LastName = view.LastName;
+            model.Email = view.Email;
+            model.UserName = view.UserName;
+            model.Password = view.Password;
+            adminlisttest.Add(model);
+            this.view.Message = "Irashem nauja";
+            LoadAllAdministrators();
+        }
+
+        private void UpdateAdministrator(object sender, EventArgs e)
+        {
+            var admin = (AdministratorModel)adminBindingSource.Current;
+            view.FirstName = admin.FirstName;
+            view.LastName = admin.LastName;
+            view.Email = admin.Email;
+            view.UserName = admin.UserName;
+            view.Password = admin.Password;
+            view.IsEdit = true;
+        }
+
+        private void AddNewAdministrator(object sender, EventArgs e)
+        {
+            this.view.IsEdit = false;
+        }
+
+
+
 
         private void DeleteAdministrator(object sender, EventArgs e)
         {
@@ -62,10 +94,7 @@ namespace wexy.Presenters
             throw new NotImplementedException();
         }
 
-        private void UpdateAdministrator(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
         List<AdministratorModel> adminlisttest = new List<AdministratorModel>()
@@ -80,15 +109,6 @@ namespace wexy.Presenters
             //adminBindingSource.DataSource = adminList;
             adminBindingSource.DataSource = adminlisttest;
         }
-
-        private void SaveAdministarorParams(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void AddNewAdministrator(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

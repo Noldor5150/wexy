@@ -64,13 +64,37 @@ namespace wexy.Views
         {
             InitializeComponent();
             
-            //AssociateAndRaiseViewEvents();
+            AssociateAndRaiseViewEvents();
         }
 
         private void AssociateAndRaiseViewEvents()
         {
-            //implement update save addnew events
-            throw new NotImplementedException();
+            //ADD button pressed
+            ButtonAdd.Click += delegate
+            {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                txtBoxFirstName.Clear();
+                txtBoxLastName.Clear();
+                txtBoxEmail.Clear();
+                txtBoxUserName.Clear();
+                txtBoxPassword.Clear();
+            };
+            //UPDATE button presssed
+            ButtonUpdate.Click += delegate
+            {
+                UpdateEvent?.Invoke(this, EventArgs.Empty);
+            };
+            // SAVE button pressed
+            ButtonSave.Click += delegate
+            {
+                var result = MessageBox.Show("Are you sure you want to create this administrator?",
+                    "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if(result == DialogResult.OK)
+                {
+                    SaveEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(message);
+                }
+            };
         }
 
         public event EventHandler SearchEvent;
